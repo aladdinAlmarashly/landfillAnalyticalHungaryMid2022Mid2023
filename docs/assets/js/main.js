@@ -226,7 +226,7 @@ $(document).ready(function () {
 
             $("#sidenav-collapse-main ul li:first a").click();
 
-            window.dispatchEvent(new Event('resize'));
+            // window.dispatchEvent(new Event('resize'));
         },
         error: function (data) {
             console.log(data);
