@@ -171,7 +171,7 @@ $(document).ready(function () {
                         textposition: 'top center',
                         mode: 'markers+text',
 
-                        
+
                         name: 'Sn*',
                         error_y: {
                             type: 'data',
@@ -188,9 +188,9 @@ $(document).ready(function () {
                         width: null,
                         height: null,
                         font: {
-                            family: 'var(--bs-body-font-family)', 
-                            size: 14, 
-                            color: '#333' 
+                            family: 'var(--bs-body-font-family)',
+                            size: 14,
+                            color: '#333'
                         },
                         xaxis: {
                             tickangle: 90,
@@ -205,7 +205,9 @@ $(document).ready(function () {
                         showlegend: false
                     };
 
-                    Plotly.newPlot(`chart_${category}_${file._id}`, data, layout, { displayModeBar: false, responsive: true });
+                    $(document).ready(function () {
+                        Plotly.newPlot(`chart_${category}_${file._id}`, data, layout, { displayModeBar: false, responsive: true });
+                    });
                 }
             }
             $(".sidenav-collapse-main-link").on("click", function (event) {
@@ -223,6 +225,8 @@ $(document).ready(function () {
             });
 
             $("#sidenav-collapse-main ul li:first a").click();
+
+            window.dispatchEvent(new Event('resize'));
         },
         error: function (data) {
             console.log(data);
