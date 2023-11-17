@@ -205,9 +205,7 @@ $(document).ready(function () {
                         showlegend: false
                     };
 
-                    $(document).ready(function () {
-                        Plotly.newPlot(`chart_${category}_${file._id}`, data, layout, { displayModeBar: false, responsive: true });
-                    });
+                    Plotly.newPlot(`chart_${category}_${file._id}`, data, layout, { displayModeBar: false, responsive: true });
                 }
             }
             $(".sidenav-collapse-main-link").on("click", function (event) {
